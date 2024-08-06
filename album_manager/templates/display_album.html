@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} {{album}} {% endblock title %}
+{% block content %}
+    <p>Has elegido el album: <strong>{{ album | capfirst }}</strong></p>
+    <h3>Informacion del Album:</h3>
+    <ul>
+        <li>Fecha de Lanzamiento: {{ album.release_year }}</li>
+        <li>Genero: {{ album.genre }} </li>
+        <li>Autor: {{ album.autor }} </li>
+    </ul> 
+    <button type="submit" class="btn btn-primary">
+        <a href="/" style="color:white">Regresar</a>
+    </button>
+{% endblock content %}
